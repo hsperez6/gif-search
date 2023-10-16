@@ -45,11 +45,7 @@ function App() {
         </div>
       </div>
       <div className="main-content">
-        {
-          (loading)
-          ? <p>Loading...</p>
-          : <GifList data={gifs}/>
-        }
+        { (loading) ? <p>Loading...</p> : <GifList data={gifs}/> }
       </div>
     </div>
   );
