@@ -17,6 +17,9 @@ function App() {
       .get(`https://api.giphy.com/v1/gifs/search?q=${query}&api_key=9RKp8rV7bQU2cdI0gWmQneqgJPqU3Ydh&limit=24&rating=g`)
       .then(response => {
         // handle success
+
+        console.log(response.data.data)
+
         if (activeFetch) {
           setGifs(response.data.data);
           setLoading(false);
@@ -32,7 +35,7 @@ function App() {
 
   }, [query]);
 
-  const handleQueryChange = searchText => {
+  const handleQueryChange = (searchText) => {
     setQuery(searchText)
   };
 
@@ -45,7 +48,7 @@ function App() {
         </div>
       </div>
       <div className="main-content">
-        { (loading) ? <p>Loading...</p> : <GifList data={gifs}/> }
+        { (loading) ? <h1>Loading...</h1> : <GifList data={gifs}/> }
       </div>
     </div>
   );
