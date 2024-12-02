@@ -1,8 +1,8 @@
 import React, { useRef } from 'react';
 
 function SearchForm ({changeQuery}) {
-  const searchText = useRef(null);
 
+  const searchText = useRef(null);
 
   const handleSubmit = e => {
     e.preventDefault();
